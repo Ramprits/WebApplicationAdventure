@@ -90,7 +90,7 @@ namespace WebApplicationAdventure.DataLayer
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Data Source=.;Initial Catalog=AdventureWorks;Integrated Security=True");
+            optionsBuilder.UseSqlServer(@"Server=.;Database=AdventureWorks;Trusted_Connection=True;MultipleActiveResultSets=true");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

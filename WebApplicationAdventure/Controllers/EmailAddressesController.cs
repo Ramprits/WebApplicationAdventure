@@ -21,7 +21,7 @@ namespace WebApplicationAdventure.Controllers
         // GET: EmailAddresses
         public async Task<IActionResult> Index()
         {
-            var adventureworksContext = _context.EmailAddress.Include(e => e.BusinessEntity);
+            var adventureworksContext = _context.EmailAddress.Include(e => e.BusinessEntity).Take(10);
             return View(await adventureworksContext.ToListAsync());
         }
 
