@@ -1,0 +1,48 @@
+@model WebApplicationAdventure.DataLayer.EmailAddress
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>EmailAddress</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <input type="hidden" asp-for="BusinessEntityId" />
+        <input type="hidden" asp-for="EmailAddressId" />
+        <dt>
+            @Html.DisplayNameFor(model => model.EmailAddress1)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EmailAddress1)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Rowguid)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Rowguid)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ModifiedDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ModifiedDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BusinessEntity)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BusinessEntity.FirstName)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            <a asp-action="Index">Back to List</a>
+        </div>
+    </form>
+</div>
